@@ -24,24 +24,94 @@
 
 <body>
     <header id="header">Weather Dashboard</header>
-    <section class="fluid-container">
+<!--this is the top section with the search form-->
+    <section class="top-container my-5">
         <div class="row">
-            <div class="col-2">
-                <h1>Search for a City:</h1>
-                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+            <div id="search-box" class="col-2">
+                <h2>Search for a City:</h2>
+                <input type="text" class="form-control" name="" id="input-field" aria-describedby="helpId" placeholder="">
                 <small id="helpId" class="form-text text-muted">Help text</small>
                 <button id="search-button" class="btn btn-primary" type="button" value="">Search</button>
             </div>
-        </div>
-
-        <div class="col-10">
-            <div id="search-result" class ="ml-3 col-8">search results</div>
-            <div id="forecast" class="ml-3 col-6">forecast</div>
+          <!--this will display the most resent searched city-->  
+            <div id="city-searched" class="col-10">
+                <h2>city searched</h2>
+                    <ul id="result-list">
+                        <li class="results">temp</li>
+                        <li class="results">wind</li>
+                        <li class="results">humidity</li>
+                        <li class="results">uv index</li>
+                    </ul>
+            </div>
         </div>
     </section>
 
+<!--this will display the cities previously searched-->
+    <section class="bottom-container">
+        <div class="row my-5">
+            <div id="city-list" class="col-2">City list</div>
+        <!--this will display the 5 day forecast-->
+            <div class="col-2">
+                <h2>5 Day Forecast:</h2>
+                <div class="card">
+                    <ul id="forecast1">
+                        <li>date</li>
+                        <li>icon</li>
+                        <li>temp</li>
+                        <li>wind</li>
+                        <li>humidity</li>
+                    </ul>
+                </div>
+            </div>
+                
+            <div class="col-2">
+                <div class="card">
+                    <ul id="forecast-list">
+                        <li>date</li>
+                        <li>icon</li>
+                        <li>temp</li>
+                        <li>wind</li>
+                        <li>humidity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <ul id="forecast-list">
+                        <li>date</li>
+                        <li>icon</li>
+                        <li>temp</li>
+                        <li>wind</li>
+                        <li>humidity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <ul id="forecast-list">
+                        <li>date</li>
+                        <li>icon</li>
+                        <li>temp</li>
+                        <li>wind</li>
+                        <li>humidity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <ul id="forecast-list">
+                        <li>date</li>
+                        <li>icon</li>
+                        <li>temp</li>
+                        <li>wind</li>
+                        <li>humidity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
-
-
-
 </html>
