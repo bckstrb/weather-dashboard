@@ -8,16 +8,16 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
-    />
-    <link
+    /> -->
+    <!-- <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="./assets/css/stylesheet.css" />
     <title>Weather Dashboard</title>
   </head>
@@ -29,7 +29,7 @@
         <div class="row">
             <div id="search-box" class="col-2">
                 <h2>Search for a City:</h2>
-                <input type="text" class="form-control" name="" id="input-field" aria-describedby="helpId" placeholder="">
+                <input type="text" class="form-control" id="input-field" aria-describedby="helpId" placeholder="search city">
                 <small id="helpId" class="form-text text-muted">Help text</small>
                 <button id="search-button" class="btn btn-primary" type="button" value="">Search</button>
             </div>
@@ -37,10 +37,10 @@
             <div id="city-searched" class="col-10">
                 <h2>city searched</h2>
                     <ul id="result-list">
-                        <li class="results">temp</li>
-                        <li class="results">wind</li>
-                        <li class="results">humidity</li>
-                        <li class="results">uv index</li>
+                        <li class="results">Temp:</li>
+                        <li class="results">Wind:</li>
+                        <li class="results">Humidity:</li>
+                        <li class="results">UV Index:</li>
                     </ul>
             </div>
         </div>
@@ -55,11 +55,11 @@
                 <h2>5 Day Forecast:</h2>
                 <div class="card">
                     <ul id="forecast1">
-                        <li>date</li>
+                        <li>Date:</li>
                         <li>icon</li>
-                        <li>temp</li>
-                        <li>wind</li>
-                        <li>humidity</li>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
                     </ul>
                 </div>
             </div>
@@ -67,11 +67,11 @@
             <div class="col-2">
                 <div class="card">
                     <ul id="forecast-list">
-                        <li>date</li>
+                        <li>Date:</li>
                         <li>icon</li>
-                        <li>temp</li>
-                        <li>wind</li>
-                        <li>humidity</li>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
                     </ul>
                 </div>
             </div>
@@ -79,11 +79,11 @@
             <div class="col-2">
                 <div class="card">
                     <ul id="forecast-list">
-                        <li>date</li>
+                        <li>Date:</li>
                         <li>icon</li>
-                        <li>temp</li>
-                        <li>wind</li>
-                        <li>humidity</li>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
                     </ul>
                 </div>
             </div>
@@ -91,11 +91,11 @@
             <div class="col-2">
                 <div class="card">
                     <ul id="forecast-list">
-                        <li>date</li>
+                        <li>Date:</li>
                         <li>icon</li>
-                        <li>temp</li>
-                        <li>wind</li>
-                        <li>humidity</li>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
                     </ul>
                 </div>
             </div>
@@ -103,15 +103,17 @@
             <div class="col-2">
                 <div class="card">
                     <ul id="forecast-list">
-                        <li>date</li>
+                        <li>Date:</li>
                         <li>icon</li>
-                        <li>temp</li>
-                        <li>wind</li>
-                        <li>humidity</li>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

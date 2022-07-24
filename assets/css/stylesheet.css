@@ -22,7 +22,8 @@
     padding-left: 40px;
     padding-right: 40px;
     margin: 6px;
-    background-color: rgb(255, 47, 0)
+    background-color: rgb(255, 47, 0);
+    border: none;
 }
 
 #search-box {
@@ -35,7 +36,7 @@
 }
 
 #city-searched {
-    border: 3px solid rgb(7, 45, 27);
+    border: 2px solid rgb(7, 45, 27);
     color: rgb(7, 45, 27)
     height: 350px;
 }
