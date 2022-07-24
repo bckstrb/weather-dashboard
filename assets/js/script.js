@@ -16,24 +16,46 @@ searchBtn.addEventListener("click", function () {
       return response.json();
     })
     .then(function (data) {
-        fetchCurrentWeather(data[0].lat, data[0].lon)
+      console.log(data[0].name);
+      fetchCurrentWeather(data[0].lat, data[0].lon);
+      weatherForecast(data[0].lat, data[0].lon);
     })
     .catch(function (err) {
       console.log(err);
     });
 });
 
-function fetchCurrentWeather(lat,lon){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=e724a8c2efe87cb7d11167a88760999b`)
-    .then (function (response) {
-        return response.json();
+function fetchCurrentWeather(lat, lon) {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=e724a8c2efe87cb7d11167a88760999b`
+  )
+    .then(function (response) {
+      return response.json();
     })
-    .then(function (data){
-        console.log(data);
+    .then(function (data) {
+      console.log(data);
     })
-    .catch(function (err){
-        console.log(err);
+    .catch(function (err) {
+      console.log(err);
+    });
+}
+
+function weatherForecast(lat, lon) {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=e724a8c2efe87cb7d11167a88760999b`
+  )
+    .then(function (response) {
+      return response.json();
     })
+    .then(function (data) {
+      //   console.log(data.list);
+      for (let i = 4; i < data.list.length; i += 8) {
+        console.log(data.list[i]);
+      }
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
 }
 
 //STEP 2:
