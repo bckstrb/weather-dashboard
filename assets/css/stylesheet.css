@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
-    /* padding: 0;
-    margin: 0; */
+}
+
+.hide {
+    display: none;
 }
 
 #header {
@@ -47,8 +49,18 @@
 }
 
 #city-list {
-    background-color: darkgray;
+    /* background-color: darkgray; */
     height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+#city-list button {
+    margin: 10px; 
+    background-color: rgb(255, 47, 0);
+    color: antiquewhite;
+    border-radius: 5px;
+    border: none;
 }
 
 #forecast1 {
@@ -58,7 +70,7 @@
     color: antiquewhite;
 }
 
-#forecast-list {
+.forecast-list {
     height: 300px;
     line-height: 375%;
     margin-top: 45px;

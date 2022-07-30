@@ -8,23 +8,24 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
-    /> -->
-    <!-- <link
+    /> 
+    <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
-    /> -->
+    /> 
     <link rel="stylesheet" href="./assets/css/stylesheet.css" />
     <title>Weather Dashboard</title>
   </head>
 
 <body>
     <header id="header">Weather Dashboard</header>
-<!--this is the top section with the search form-->
+    
+    <!--this is the top section with the search form-->
     <section class="top-container my-5">
         <div class="row">
             <div id="search-box" class="col-2">
@@ -33,85 +34,33 @@
                 <small id="helpId" class="form-text text-muted">Help text</small>
                 <button id="search-button" class="btn btn-primary" type="button" value="">Search</button>
             </div>
-          <!--this will display the most resent searched city-->  
+          
+            <!--this will display the most resent searched city-->  
             <div id="city-searched" class="col-10">
                 <h2>city searched</h2>
+                <img src="" alt="" class="icon">
                     <ul id="result-list">
-                        <li class="results">Temp:</li>
-                        <li class="results">Wind:</li>
-                        <li class="results">Humidity:</li>
-                        <li class="results">UV Index:</li>
+                        <li class="results temp">Temp:</li>
+                        <li class="results wind">Wind:</li>
+                        <li class="results humidity">Humidity:</li>
+                        <li class="results uvi">UV Index:</li>
                     </ul>
             </div>
         </div>
     </section>
 
-<!--this will display the cities previously searched-->
+    <!--this will display the cities previously searched-->
     <section class="bottom-container">
-        <div class="row my-5">
+        <h2 class="text-center">5 Day Forecast:</h2>
+        <div class="row my-5 cardsContainer">
             <div id="city-list" class="col-2">City list</div>
-        <!--this will display the 5 day forecast-->
-            <div class="col-2">
-                <h2>5 Day Forecast:</h2>
-                <div class="card">
-                    <ul id="forecast1">
-                        <li>Date:</li>
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                </div>
-            </div>
-                
-            <div class="col-2">
-                <div class="card">
-                    <ul id="forecast-list">
-                        <li>Date:</li>
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="card">
-                    <ul id="forecast-list">
-                        <li>Date:</li>
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="card">
-                    <ul id="forecast-list">
-                        <li>Date:</li>
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-2">
-                <div class="card">
-                    <ul id="forecast-list">
-                        <li>Date:</li>
-                        <li>icon</li>
-                        <li>Temp:</li>
-                        <li>Wind:</li>
-                        <li>Humidity:</li>
-                    </ul>
-                </div>
-            </div>
+            
+            <!--this will display the 5 day forecast-->
         </div>
+                
+            
+
+            
     </section>
 
     <script src="./assets/js/script.js"></script>
