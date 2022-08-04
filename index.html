@@ -8,61 +8,58 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    /> 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    /> 
     <link rel="stylesheet" href="./assets/css/stylesheet.css" />
     <title>Weather Dashboard</title>
   </head>
 
-<body>
+  <body>
     <header id="header">Weather Dashboard</header>
-    
+
     <!--this is the top section with the search form-->
     <section class="top-container my-5">
-        <div class="row">
-            <div id="search-box" class="col-2">
-                <h2>Search for a City:</h2>
-                <input type="text" class="form-control" id="input-field" aria-describedby="helpId" placeholder="search city">
-                <small id="helpId" class="form-text text-muted">Help text</small>
-                <button id="search-button" class="btn btn-primary" type="button" value="">Search</button>
-            </div>
-          
-            <!--this will display the most resent searched city-->  
-            <div id="city-searched" class="col-10">
-                <h2>city searched</h2>
-                <img src="" alt="" class="icon">
-                    <ul id="result-list">
-                        <li class="results temp">Temp:</li>
-                        <li class="results wind">Wind:</li>
-                        <li class="results humidity">Humidity:</li>
-                        <li class="results uvi">UV Index:</li>
-                    </ul>
-            </div>
+      <div class="row">
+        <div id="search-box" class="col-2">
+          <h2>Search for a City:</h2>
+          <input
+            type="text"
+            class="form-control"
+            id="input-field"
+            aria-describedby="helpId"
+            placeholder="search city"
+          />
+          <small id="helpId" class="form-text text-muted">Help text</small>
+          <button
+            id="search-button"
+            class="btn btn-primary"
+            type="button"
+            value="search"
+          >
+            Search
+          </button>
         </div>
+
+        <!--this will display the most resent searched city-->
+        <div id="city-searched" class="col-10">
+          <h2></h2>
+          <img src="" alt="" class="icon" />
+          <ul id="result-list">
+            <li class="results temp">Temp:</li>
+            <li class="results wind">Wind:</li>
+            <li class="results humidity">Humidity:</li>
+            <li class="results uvi">UV Index:</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!--this will display the cities previously searched-->
     <section class="bottom-container">
-        <h2 class="text-center">5 Day Forecast:</h2>
-        <div class="row my-5 cardsContainer">
-            <div id="city-list" class="col-2">City list</div>
-            
-            <!--this will display the 5 day forecast-->
-        </div>
-                
-            
-
-            
+      <h2 class="text-center">5 Day Forecast:</h2>
+      <div class="row my-5 cardsContainer">
+        <div id="city-list" class="col-2"></div>
+      </div>
     </section>
 
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>

@@ -49,7 +49,6 @@
 }
 
 #city-list {
-    /* background-color: darkgray; */
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -63,15 +62,9 @@
     border: none;
 }
 
-#forecast1 {
-    height: 300px;
-    line-height: 375%;
-    background-color: rgb(92, 1, 54);
-    color: antiquewhite;
-}
 
 .forecast-list {
-    height: 300px;
+    height: 400px;
     line-height: 375%;
     margin-top: 45px;
     background-color: rgb(92, 1, 54);
