@@ -74,22 +74,6 @@ function weatherForecast(lat, lon) {
     })
 };
 
-// function fetchUvi(data) {
-//   fetch(
-//     `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=e724a8c2efe87cb7d11167a88760999b`
-//   )
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data.list);
-//       displayUvi(data.list);
-//     })
-//     .catch(function (err) {
-//       console.log(err);
-//     })
-// };
-
 renderSavedCities();
 
 function renderSavedCities() {
@@ -103,17 +87,18 @@ function renderSavedCities() {
   for (var i = 0; i < arrayFromStorage.length; i++) {
     var citySearched = document.createElement("button");
     citySearched.setAttribute("id", "cityBtn");
-    citySearched.setAttribute("value", "");
     citySearched.textContent = arrayFromStorage[i];
     cityList.append(citySearched);
   }
 };
 
-cityList.addEventListener("click", function() {
-    // console.log("click");
-    var currentCity = document.querySelectorAll("cityBtn").value;
-    console.log(currentCity);
-})
+var currentCity = document.querySelectorAll("#cityBtn");
+currentCity.forEach(function (btn) {
+    btn.addEventListener("click", function() {
+        displayCurrentData();
+        displayForecast();
+    });
+});
 
 //STEP 3:
 //--once the data is retreived, will populate said data and display on page
