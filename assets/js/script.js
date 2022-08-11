@@ -33,6 +33,7 @@ searchBtn.addEventListener("click", function () {
       }
       fetchCurrentWeather(data[0].lat, data[0].lon);
       weatherForecast(data[0].lat, data[0].lon);
+      // fetchUvi(data[0].lat, data[0].lon);
     })
     .catch(function (err) {
       console.log(err);
@@ -63,7 +64,7 @@ function weatherForecast(lat, lon) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.list);
+      // console.log(data.list);
       displayForecast(data.list);
       for (var i = 4; i < data.list.length; i += 8) {
         // console.log(data.list[i]);
@@ -72,6 +73,22 @@ function weatherForecast(lat, lon) {
     .catch(function (err) {
       console.log(err);
     })
+};
+
+function fetchUvi (lat, long) {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=hourly,daily&appid=e724a8c2efe87cb7d11167a88760999b`
+  )
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    // displayCurrentUvi();
+  })
+  .catch(function (err) {
+    console.log(err);
+  })
 };
 
 renderSavedCities();
@@ -97,6 +114,7 @@ currentCity.forEach(function (btn) {
     btn.addEventListener("click", function() {
         displayCurrentData();
         displayForecast();
+        // displayCurrentUvi();
     });
 });
 
@@ -106,6 +124,7 @@ var tempLi = document.querySelector(".temp");
 var windLi = document.querySelector(".wind");
 var humidityLi = document.querySelector(".humidity");
 var currentDayIcon = document.querySelector(".icon");
+var uviLi = document.querySelector(".uvi")
 
 function displayCurrentData(data) {
   // console.log(data.main.temp);
@@ -117,6 +136,11 @@ function displayCurrentData(data) {
     `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
   )
 };
+
+// function displayCurrentUvi(data) {
+//   console.log(data.current.uvi)
+//   uviLi.textContent = "UV Index: " + data.current.uvi;
+// }
 
 var cardsContainer = document.querySelector(".cardsContainer");
 
