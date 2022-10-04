@@ -39,21 +39,21 @@ searchBtn.addEventListener("click", function () {
     });
 });
 
-function fetchCurrentWeather(lat, lon) {
-  fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=hourly,daily&appid=e724a8c2efe87cb7d11167a88760999b`
-  )
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-      displayCurrentData(data);
-    })
-    .catch(function (err) {
-      console.log(err);
-    })
-};
+// function fetchCurrentWeather(lat, lon) {
+//   fetch(
+//     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=hourly,daily&appid=e724a8c2efe87cb7d11167a88760999b`
+//   )
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (data) {
+//         console.log(data);
+//       displayCurrentData(data);
+//     })
+//     .catch(function (err) {
+//       console.log(err);
+//     })
+// };
 
 function weatherForecast(lat, lon) {
     fetch(
@@ -92,13 +92,13 @@ function weatherForecast(lat, lon) {
     }
   };
   
-  var currentCity = document.querySelectorAll("#cityBtn");
-  currentCity.forEach(function (btn) {
-      btn.addEventListener("click", function() {
-          displayCurrentData();
-          displayForecast();
-      });
-  });
+  // var currentCity = document.querySelectorAll("#cityBtn");
+  // currentCity.forEach(function (btn) {
+  //     btn.addEventListener("click", function() {
+  //         displayCurrentData();
+  //         displayForecast();
+  //     });
+  // });
   
   //STEP 3:
   //--once the data is retreived, will populate said data and display on page
@@ -109,15 +109,15 @@ function weatherForecast(lat, lon) {
   var uviLi = document.querySelector(".uvi")
   
   function displayCurrentData(data) {
-    console.log(data.weather.wind-speed);
+    // console.log(data.weather.wind-speed);
     tempLi.textContent = "Temp: " + data.current.temp + "°F";
-    windLi.textContent = "Wind: " + data.weather.wind-speed + " MPH";
+    windLi.textContent = "Wind: " + data.weather.wind_speed + " MPH";
     humidityLi.textContent = "Humidity: " + data.current.humidity + " %";
+    uviLi.textContent = "UV Index: " + data.current.uvi;
     currentDayIcon.setAttribute(
       "src",
       `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     );
-    uviLi.textContent = "UV Index: " + data.current.uvi;
    };
   
   var cardsContainer = document.querySelector(".cardsContainer");
@@ -153,4 +153,4 @@ function weatherForecast(lat, lon) {
       cardsContainer.appendChild(cards);
     }
   };
-  
+  $("#results").empty().append(myHtml);
